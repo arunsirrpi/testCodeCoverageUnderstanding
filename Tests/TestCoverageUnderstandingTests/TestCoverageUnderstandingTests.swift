@@ -6,6 +6,16 @@ final class TestCoverageUnderstandingTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(TestCoverageUnderstanding().text, "Hello, World!")
+        let sut = TestCoverageUnderstanding()
+        
+        let actualOutput = sut.isEven(input: 2)
+        XCTAssertEqual(actualOutput, true)
+    }
+    
+    func testInRange() {
+        let sut = TestCoverageUnderstanding()
+        
+        let actualOutput = sut.isInRangeOf_2_and_10(input: 3)
+        XCTAssertEqual(actualOutput, true)
     }
 }
